@@ -1,6 +1,6 @@
 {
   "name": "remark-bemjson",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "remark plugin ti render bemjson",
   "main": "index.js",
   "scripts": {
