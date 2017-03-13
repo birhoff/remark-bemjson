@@ -9,7 +9,7 @@
     "specs": "mocha test/**",
     "cover": "nyc mocha test/**",
     "lint": "eslint .",
-    "release": "standard-version",
+    "release": "standard-version; git push --follow-tags origin master",
     "github-release": "conventional-github-releaser -p angular -r 0"
   },
   "engines": {
