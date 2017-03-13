@@ -1,0 +1,40 @@
+{
+  "name": "remark-bemjson",
+  "version": "0.0.1",
+  "description": "remark plugin ti render bemjson",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "npm run specs",
+    "specs": "mocha test/**",
+    "cover": "nyc mocha test/**",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": ">= 4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birhoff/remark-bemjson.git"
+  },
+  "keywords": [
+    "remark",
+    "bemjson"
+  ],
+  "author": "Konstantin Gladkikh <birhoff@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/birhoff/remark-bemjson/issues"
+  },
+  "homepage": "https://github.com/birhoff/remark-bemjson#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "eslint-config-birhoff": "0.0.1",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2"
+  },
+  "dependencies": {
+    "mdast-util-to-bemjson": "0.0.1"
+  }
+}

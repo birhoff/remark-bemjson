@@ -1,2 +1,2 @@
 # remark-bemjson
-remark plugin for bemjson
+remark plugin to compile bemjson
