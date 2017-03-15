@@ -1,7 +1,7 @@
 {
   "name": "remark-bemjson",
   "version": "0.0.3",
-  "description": "remark plugin ti render bemjson",
+  "description": "remark plugin to compile bemjson",
   "main": "index.js",
   "scripts": {
     "pretest": "npm run lint",
@@ -12,6 +12,10 @@
     "release": "standard-version; git push --follow-tags origin master",
     "github-release": "conventional-github-releaser -p angular -r 0"
   },
+  "files": [
+    "index.js",
+    "lib/**"
+  ],
   "engines": {
     "node": ">= 4.0"
   },
@@ -21,10 +25,11 @@
   },
   "keywords": [
     "remark",
-    "bemjson"
+    "bemjson",
+    "compiler"
   ],
   "author": "Konstantin Gladkikh <birhoff@gmail.com>",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/birhoff/remark-bemjson/issues"
   },
