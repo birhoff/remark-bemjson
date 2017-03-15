@@ -2,6 +2,7 @@
 
 const expect = require('chai').expect;
 const remark = require('remark');
+const vfile = require('vfile');
 const nodeEval = require('node-eval');
 
 const bemjson = require('../index');
@@ -56,5 +57,14 @@ describe('remark-bemjson()', () => {
     it('should add `module.exports =` to the root', () => {
         const bjsonString = remark().use(bemjson).stringify({ type: 'root' });
         expect(bjsonString).to.contain('module.exports =');
+    });
+
+    it('should replace file extension with `.bemjson.js`', () => {
+        const file = vfile({ path: '~/example.md', contents: 'Alpha *braavo* charlie.' });
+        file.extname = '.md';
+
+        const bjsonFile = remark().use(bemjson).processSync(file);
+
+        expect(bjsonFile.basename).to.equal('example.bemjson.js');
     });
 });
