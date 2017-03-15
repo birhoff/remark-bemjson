@@ -42,6 +42,6 @@
     "nyc": "^10.1.2"
   },
   "dependencies": {
-    "mdast-util-to-bemjson": "0.0.1"
+    "mdast-util-to-bemjson": "^0.1.1"
   }
 }
