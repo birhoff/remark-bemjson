@@ -1,6 +1,6 @@
 {
   "name": "remark-bemjson",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "remark plugin to compile bemjson",
   "main": "index.js",
   "scripts": {
