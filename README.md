@@ -42,7 +42,6 @@ const file = remark().use(bemjson).processSync('# Hello im _heading_');
 
 console.log(String(file));
 ```
-
 Yields: 
 ```json
 {
@@ -67,9 +66,22 @@ Yields:
 
 ### `remark.use(bemjson[, options])`
 
-##### `options`
+#### `options`
 
 All options are passed to [`mdast-util-to-bemjson`](https://github.com/birhoff/mdast-util-to-bemjson).
+
+##### *String* exportType - determinate how to export bemjson. Default: `commonJS`
+
+Value      | Description
+-----------|------------
+`commonJS` | Exports to [CJS](https://nodejs.org/docs/latest/api/modules.html#modules_modules).
+`modules`  | Exports to [ES6 modules](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export). Optional combines with `exportName`. 
+`umd`      | Exports to [UMD](https://github.com/umdjs/umd) with [umd package](https://github.com/ForbesLindesay/umd). *Requires* exportName.
+`YModules` | Exports to [YModules](https://github.com/ymaps/modules). *Requires* exportName.
+`no export`| Don't do any export. Just plain `JSON.stringify`.
+
+##### *String* exportName - export bemjson with given name when use `modules`, `umd` or `YModules`.
+
 
 License
 -------
