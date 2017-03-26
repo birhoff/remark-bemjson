@@ -60,4 +60,10 @@ describe('remark-bemjson()', () => {
             () => remark().use(bemjson, { exportType: 'YModules' }).stringify({ type: 'root' })
         ).to.throw(AssertionError);
     });
+
+    it('should throw Error with `exportType=unsupported`', () => {
+        expect(
+            () => remark().use(bemjson, { exportType: 'unsupported' }).stringify({ type: 'root' })
+        ).to.throw('Not supported exportType');
+    });
 });
