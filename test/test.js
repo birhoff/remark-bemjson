@@ -2,7 +2,7 @@
 
 const expect = require('chai').expect;
 const remark = require('remark');
-const vfile = require('vfile');
+const vFile = require('vfile');
 const nodeEval = require('node-eval');
 
 const bemjson = require('../index');
@@ -48,7 +48,7 @@ describe('remark-bemjson()', () => {
     });
 
     it('should replace file extension with `.bemjson.js`', () => {
-        const file = vfile({ path: '~/example.md', contents: 'Alpha *braavo* charlie.' });
+        const file = vFile({ path: '~/example.md', contents: 'Alpha *braavo* charlie.' });
         file.extname = '.md';
 
         const bjsonFile = remark().use(bemjson).processSync(file);

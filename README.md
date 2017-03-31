@@ -68,8 +68,6 @@ Yields:
 
 #### `options`
 
-All options are passed to [`mdast-util-to-bemjson`](https://github.com/birhoff/mdast-util-to-bemjson).
-
 ##### *String* exportType - determinate how to export bemjson. Default: `commonJS`
 
 Value      | Description
@@ -81,6 +79,8 @@ Value      | Description
 `no export`| Don't do any export. Just plain `JSON.stringify`.
 
 ##### *String* exportName - export bemjson with given name when use `modules`, `umd` or `YModules`.
+
+##### *Function* augment - callback called on every node. [Signature](https://github.com/birhoff/mdast-util-to-bemjson#augmentbemnodebemnode-important-must-return-bemnode). Option passed to [`mdast-util-to-bemjson`](https://github.com/birhoff/mdast-util-to-bemjson).
 
 
 License
