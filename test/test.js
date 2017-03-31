@@ -42,18 +42,6 @@ describe('remark-bemjson()', () => {
         });
     });
 
-    it('should stringify tags with `option.tag=true`', () => {
-        compare({ type: 'heading', depth: 1 }, { block: 'heading', mods: { level: 1 }, tag: 'h1' }, { tag: true });
-    });
-
-    it('should stringify `my-root` with `option.root=my-root`', () => {
-        compare({ type: 'root' }, { block: 'my-root' }, { root: 'my-root' });
-    });
-
-    it('should stringify block as element with `option.scope=true`', () => {
-        compare({ type: 'alpha' }, { elem: 'alpha' }, { scope: true });
-    });
-
     it('should add `module.exports =` to the root', () => {
         const bjsonString = remark().use(bemjson).stringify({ type: 'root' });
         expect(bjsonString).to.contain('module.exports =');
