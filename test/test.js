@@ -55,4 +55,14 @@ describe('remark-bemjson()', () => {
 
         expect(bjsonFile.basename).to.equal('example.bemjson.js');
     });
+
+    it('should not generate content with export=false', () => {
+        const file = vFile({ path: '~/example.md', contents: 'Alpha *braavo* charlie.' });
+        file.extname = '.md';
+
+        const bjsonFile = remark().use(bemjson, { 'export': false }).processSync(file);
+
+        expect(bjsonFile.data).to.have.property('block', 'md-root');
+        expect(bjsonFile.toString()).to.equal('');
+    });
 });

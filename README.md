@@ -68,7 +68,7 @@ Yields:
 
 #### `options`
 
-##### *String* exportType - determinate how to export bemjson. Default: `commonJS`
+##### *string* exportType - determinate how to export bemjson. Default: `commonJS`
 
 Value      | Description
 -----------|------------
@@ -78,7 +78,9 @@ Value      | Description
 `YModules` | Exports to [YModules](https://github.com/ymaps/modules). *Requires* exportName.
 `no export`| Don't do any export. Just plain `JSON.stringify`.
 
-##### *String* exportName - export bemjson with given name when use `modules`, `umd` or `YModules`.
+##### *string* exportName - export bemjson with given name when use `modules`, `umd` or `YModules`.
+
+##### *boolean* export - if `false` don't generate export. Default: `true` 
 
 ##### *Function* augment - callback called on every node. [Signature](https://github.com/birhoff/mdast-util-to-bemjson#augmentbemnodebemnode-important-must-return-bemnode). Option passed to [`mdast-util-to-bemjson`](https://github.com/birhoff/mdast-util-to-bemjson).
 
