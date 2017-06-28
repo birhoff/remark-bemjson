@@ -27,7 +27,7 @@ describe('remark-bemjson()', () => {
                 type: 'root',
                 children: [{ value: 'baz' }]
             });
-        }).to.throw('AssertionError: Expected node, got \'[object Object]\'');
+        }).to.throw('Expected node, got \'[object Object]\'');
     });
 
     it('should stringify unknown nodes', () => {

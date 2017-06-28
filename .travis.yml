@@ -8,6 +8,7 @@ matrix:
     - node_js: "6"
     - node_js: "7"
       env: COVERALLS=1
+    - node_js: "8"
 
 after_success:
   - if [ "x$COVERALLS" = "x1" ] && npm i coveralls; then
