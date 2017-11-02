@@ -41,7 +41,7 @@
     "eslint-config-birhoff": "^0.1.0",
     "mocha": "^4.0.0",
     "node-eval": "^1.1.0",
-    "nyc": "^11.0.2",
+    "nyc": "^11.3.0",
     "remark": "^8.0.0",
     "vfile": "^2.0.1"
   },
